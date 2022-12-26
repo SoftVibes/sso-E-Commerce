@@ -78,7 +78,7 @@ i {
 
 #navbar li {
     list-style: none;
-    padding: 0 50px;
+    padding: 0 40px;
 }
 
 #navbar li button {
@@ -115,6 +115,13 @@ i {
     width: 35px;
 }
 
+.input-search {
+    outline: none;
+    width: 15em;
+    border: 1px solid black;
+    padding: 2px 3px;
+}
+
 /* Categories section */
 .categories {
     height: 90vh;
@@ -129,22 +136,21 @@ i {
     border: 1px solid rgb(0, 0, 0, 0);
     border-radius: .3rem;
     background-color: red;
-    width: 13em;
-    height: 13em;
+    width: 15vw;
+    height: 15vw;
     margin-inline: 3em;
     cursor: pointer;
 }
 
 .img-category {
-    position: absolute;
-    width: 13em;
-    height: 13em;
+    width: 15vw;
+    height: 15vw;
 }
 
 .overlay-category {
     position: absolute;
-    width: 13em;
-    height: 13em;
+    width: 15vw;
+    height: 15vw;
     background-color: rgba(255, 128, 149, 0.4);
     opacity: 0;
     transition: opacity 250ms;
