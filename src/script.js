@@ -1,15 +1,15 @@
 /* Categories section bs */
 
 function toggleCategories() {
-    elem = document.getElementsByClassName('categories')[0];
-    elem2 = document.getElementsByClassName('main-page')[0];
+    categories_element = document.getElementsByClassName('categories')[0];
+    main_element = document.getElementsByClassName('main-page')[0];
 
-    if (elem.style.display == 'none') {
-        elem.style.display = 'block';
-        elem2.style.display = 'none';
+    if (categories_element.style.display == 'none') {
+        categories_element.style.display = 'block';
+        main_element.style.display = 'none';
     } else {
-        elem.style.display = 'none';
-        elem2.style.display = 'grid';
+        categories_element.style.display = 'none';
+        main_element.style.display = 'grid';
     }
 }
 
