@@ -119,10 +119,16 @@ i {
 .categories {
     height: 90vh;
     display: none;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 .category {
-    background-color: red;
+    display: flex;
+    border: 1px solid red;
+    width: 15em;
+    height: 15em;
+    margin: 15px;
 }
 
 /* main home page */

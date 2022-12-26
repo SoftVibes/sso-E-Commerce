@@ -5,7 +5,7 @@ function toggleCategories() {
     elem2 = document.getElementsByClassName('main-page')[0];
 
     if (elem.style.display == 'none') {
-        elem.style.display = 'block';
+        elem.style.display = 'flex';
         elem2.style.display = 'none';
     } else {
         elem.style.display = 'none';
