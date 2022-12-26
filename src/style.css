@@ -172,3 +172,27 @@ i {
     margin-left: 10%;
     outline: none;
 }
+
+.features {
+    height: 35vh;
+}
+
+.swiper {
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -150px;
+    margin-top: -150px;
+}
+
+.swiper-slide {
+    background-position: center;
+    background-size: cover;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+}

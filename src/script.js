@@ -15,7 +15,7 @@ function toggleCategories() {
 
 document.getElementsByClassName('button-categories')[0].addEventListener('click', () => {
     console.log(document.getElementsByClassName('button-categories')[0].classList)
-    if (document.getElementsByClassName('button-categories')[0].classList.contains('active')) return ; 
+    if (document.getElementsByClassName('button-categories')[0].classList.contains('active')) return;
     toggleCategories()
 });
 document.getElementsByClassName('button-home')[0].addEventListener('click', () => {
@@ -34,3 +34,20 @@ for (let i = 0; i < buttons.length; i++) {
         this.classList.add('active');
     });
 }
+
+
+/* swiper trollin */
+
+var swiper = new Swiper(".mySwiper", {
+    effect: "cube",
+    grabCursor: true,
+    cubeEffect: {
+      shadow: true,
+      slideShadows: true,
+      shadowOffset: 20,
+      shadowScale: 0.94,
+    },
+    pagination: {
+      el: ".swiper-pagination",
+    },
+  });
