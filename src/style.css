@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* puro styling bs */
+.material-symbols-outlined {
+    font-variation-settings:
+        'FILL' 0,
+        'wght' 700,
+        'GRAD' 200,
+        'opsz' 48
+}
+
+.logo {
+    scale: 0.8;
+
+}
+
+#logo-a {
+    width: 120px;
+    height: 70px;
+    display: flex;
+}
+
+/* actual matha byatha css code */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+}
+
+/* navbar */
+
+i {
+    display: inline-block;
+    height: 1rem;
+    width: 1rem;
+}
+
+#header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 80px;
+    background: #E3E6F3;
+}
+
+
+#navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#navbar li {
+    list-style: none;
+    padding: 0 20px;
+}
+
+#navbar li a {
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    color: #1a1a1a;
+    transition: font-size 0.25s ease-in-out, text-decoration 0.25s ease-in;
+}
+
+#symbol a::before {
+    height: 0;
+}
+
+#navbar li a::before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 0px;
+    height: 4px;
+    margin-top: 25px;
+    background-color: black;
+    transition: all 0.15s ease-in;
+}
+
+#navbar li a:hover::before,
+#navbar li a.active::before {
+    width: 30px;
+}
