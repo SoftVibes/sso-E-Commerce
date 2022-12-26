@@ -1,10 +1,22 @@
 /* Categories section bs */
+categories_element = document.getElementsByClassName('categories')[0];
+main_element = document.getElementsByClassName('main-page')[0];
+team_element = document.getElementsByClassName('team')[0];
+about_element = document.getElementsByClassName('about')[0];
+function toggle(ref) {
+    var ele = null;
+    switch (ref) {
+        case 'categories':
+            ele = categories_element
+        case 'team':
+            ele = team_element
+        case 'about':
+            ele = about_element
+        default:
+            ele = main_element
+    }
 
-function toggleCategories() {
-    categories_element = document.getElementsByClassName('categories')[0];
-    main_element = document.getElementsByClassName('main-page')[0];
-
-    if (categories_element.style.display == 'none') {
+    if (ele.style.display == 'none') {
         categories_element.style.display = 'flex';
         main_element.style.display = 'none';
     } else {
@@ -14,7 +26,6 @@ function toggleCategories() {
 }
 
 document.getElementsByClassName('button-categories')[0].addEventListener('click', () => {
-    console.log(document.getElementsByClassName('button-categories')[0].classList)
     if (document.getElementsByClassName('button-categories')[0].classList.contains('active')) return;
     toggleCategories()
 });
@@ -22,6 +33,7 @@ document.getElementsByClassName('button-home')[0].addEventListener('click', () =
     if (document.getElementsByClassName('button-home')[0].classList.contains('active')) return;
     toggleCategories()
 });
+document.getElementsByClassName('button-')
 document.getElementsByClassName('categories')[0].style.display = 'none';
 
 /* Category underline bs */
