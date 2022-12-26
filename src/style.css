@@ -140,21 +140,21 @@ i {
     border: 1px solid rgb(0, 0, 0, 0);
     border-radius: .3rem;
     background-color: red;
-    width: 15vw;
-    height: 15vw;
-    margin-inline: 3em;
+    width: 16vw;
+    height: 16vw;
+    margin-inline: 2.5vw;
     cursor: pointer;
 }
 
 .img-category {
-    width: 15vw;
-    height: 15vw;
+    width: 16vw;
+    height: 16vw;
 }
 
 .overlay-category {
     position: absolute;
-    width: 15vw;
-    height: 15vw;
+    width: 16vw;
+    height: 16vw;
     background-color: rgba(255, 128, 149, 0.4);
     opacity: 0;
     transition: opacity 250ms;
