@@ -81,19 +81,25 @@ i {
     padding: 0 50px;
 }
 
-#navbar li a {
+#navbar li button {
     text-decoration: none;
     font-size: 20px;
     font-weight: 600;
     color: #1a1a1a;
     transition: font-size 0.25s ease-in-out, text-decoration 0.25s ease-in;
+    border: none;
+    background-color: rgba(0, 0, 0, 0);
+    cursor: pointer;
+    outline: none;
 }
 
-#symbol a::before {
+
+
+#symbol button::before {
     height: 0;
 }
 
-#navbar li a::before {
+#navbar li button::before {
     content: '';
     display: block;
     position: absolute;
@@ -104,9 +110,19 @@ i {
     transition: all 0.15s ease-in;
 }
 
-#navbar li a:hover::before,
-#navbar li a.active::before {
+#navbar li button:hover::before,
+#navbar li button.active::before {
     width: 35px;
+}
+
+/* Categories section */
+.categories {
+    height: 90vh;
+    display: none;
+}
+
+.category {
+    background-color: red;
 }
 
 /* main home page */
