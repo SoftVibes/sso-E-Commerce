@@ -120,15 +120,44 @@ i {
     height: 90vh;
     display: none;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
+    padding-top: 1em;
 }
 
 .category {
     display: flex;
-    border: 1px solid red;
-    width: 15em;
-    height: 15em;
-    margin: 15px;
+    border: 1px solid rgb(0, 0, 0, 0);
+    border-radius: .3rem;
+    background-color: red;
+    width: 13em;
+    height: 13em;
+    margin-inline: 3em;
+    cursor: pointer;
+}
+
+.img-category {
+    position: absolute;
+    width: 13em;
+    height: 13em;
+}
+
+.overlay-category {
+    position: absolute;
+    width: 13em;
+    height: 13em;
+    background-color: rgba(255, 128, 149, 0.4);
+    opacity: 0;
+    transition: opacity 250ms;
+}
+
+.text-category {
+    color: rgb(221, 221, 221);
+    text-shadow: 5px 5px 5px rgb(51, 51, 51);
+    position: absolute;
+}
+
+.overlay-category:hover {
+    opacity: 1;
 }
 
 /* main home page */
