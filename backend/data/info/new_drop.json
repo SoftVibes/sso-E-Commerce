@@ -1,0 +1,11 @@
+[
+    {
+        "id":1,
+        "name": "New Big Jeans",
+        "size": ["S"],
+        "price": [120],
+        "description": "new big jeans",
+        "inStock": true,
+        "images": ["bigJeans1.png", "bigJeans2.png"]
+    }
+]
