@@ -13,13 +13,14 @@ function toggleCategories() {
     }
 }
 
-document.getElementsByClassName('button-categories')[0].addEventListener('click',()=> { 
-    if(this.classList.contains('active')) return;
-    toggleCategories
-}); 
-document.getElementsByClassName('button-home')[0].addEventListener('click', ()=> { 
-    if(this.classList.contains('active')) return;
-    toggleCategories
+document.getElementsByClassName('button-categories')[0].addEventListener('click', () => {
+    console.log(document.getElementsByClassName('button-categories')[0].classList)
+    if (document.getElementsByClassName('button-categories')[0].classList.contains('active')) return ; 
+    toggleCategories()
+});
+document.getElementsByClassName('button-home')[0].addEventListener('click', () => {
+    if (document.getElementsByClassName('button-home')[0].classList.contains('active')) return;
+    toggleCategories()
 });
 document.getElementsByClassName('categories')[0].style.display = 'none';
 
@@ -28,7 +29,7 @@ document.getElementsByClassName('categories')[0].style.display = 'none';
 buttons = document.getElementsByClassName('button-navbar');
 for (let i = 0; i < buttons.length; i++) {
     buttons[i].addEventListener('click', function () {
-        if(document.getElementsByClassName('active')[0] == this) return;
+        //if (document.getElementsByClassName('active')[0] == this) return;
         document.getElementsByClassName('active')[0].classList.remove('active');
         this.classList.add('active');
     });
