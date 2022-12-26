@@ -20,6 +20,22 @@
     display: flex;
 }
 
+h4 {
+    font-size: 30px;
+}
+
+h2 {
+    font-size: 50px;
+}
+
+h1 {
+    font-size: 70px;
+}
+
+h4 {
+    font-size: 30px;
+}
+
 /* actual matha byatha css code */
 * {
     margin: 0;
@@ -47,6 +63,10 @@ i {
     justify-content: space-between;
     padding: 20px 80px;
     background: #E3E6F3;
+    position: sticky;
+    top: 0;
+    left: 0;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.07);
 }
 
 
@@ -58,12 +78,12 @@ i {
 
 #navbar li {
     list-style: none;
-    padding: 0 20px;
+    padding: 0 50px;
 }
 
 #navbar li a {
     text-decoration: none;
-    font-size: 16px;
+    font-size: 20px;
     font-weight: 600;
     color: #1a1a1a;
     transition: font-size 0.25s ease-in-out, text-decoration 0.25s ease-in;
@@ -79,12 +99,54 @@ i {
     position: absolute;
     width: 0px;
     height: 4px;
-    margin-top: 25px;
+    margin-top: 30px;
     background-color: black;
     transition: all 0.15s ease-in;
 }
 
 #navbar li a:hover::before,
 #navbar li a.active::before {
-    width: 30px;
+    width: 35px;
+}
+
+/* main home page */
+
+.main-page {
+    height: 90vh;
+    display: grid;
+    grid-template-rows: 20% 15% 5% 10% 5% 10% 30%;
+    align-items: center;
+    background: #E3E6F3;
+
+}
+
+.main-page>h4 {
+    grid-row: 2;
+    margin-left: 10%;
+}
+
+.main-page>h2 {
+    grid-row: 3;
+    margin-left: 10%;
+}
+
+.main-page>h1 {
+    grid-row: 4;
+    margin-left: 10%;
+}
+
+.main-page>p {
+    grid-row: 5;
+    margin-left: 10%;
+}
+
+.main-page>button {
+    grid-row: 6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 10%;
+    height: 50%;
+    margin-left: 10%;
+    outline: none;
 }
