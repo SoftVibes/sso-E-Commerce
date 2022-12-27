@@ -71,3 +71,7 @@ document.getElementById('search').addEventListener('keyup', (key) => {
         window.location.href = 'search.html';
     }
 });
+
+document.getElementsByClassName('button-cart')[0].addEventListener('click', function () {
+    window.location.href = 'cart.html';
+});
