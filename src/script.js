@@ -18,6 +18,10 @@ function toggle(ref) {
         }
 
         if (ref == 'home') {
+            if (!window.location.href.endsWith('/index.html')) {
+                window.location.href = '/src/index.html';
+                return;
+            }
             categories_element.style.display = 'none';
             main_element.style.display = 'grid';
             team_element.style.display = 'none';
