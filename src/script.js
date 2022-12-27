@@ -2,38 +2,35 @@
 categories_element = document.getElementsByClassName('categories')[0];
 main_element = document.getElementsByClassName('main-page')[0];
 team_element = document.getElementsByClassName('team')[0];
-about_element = document.getElementsByClassName('about')[0];
 function toggle(ref) {
-    var ele = null;
-    switch (ref) {
-        case 'categories':
-            ele = categories_element
-        case 'team':
-            ele = team_element
-        case 'about':
-            ele = about_element
-        default:
-            ele = main_element
-    }
+        if (ref == 'categories') {
+            categories_element.style.display = 'flex';
+            main_element.style.display = 'none';
+            team_element.style.display = 'none';
+            return;
+        }
 
-    if (ele.style.display == 'none') {
-        categories_element.style.display = 'flex';
-        main_element.style.display = 'none';
-    } else {
-        categories_element.style.display = 'none';
-        main_element.style.display = 'grid';
-    }
+        if (ref == 'team') {
+            categories_element.style.display = 'none';
+            main_element.style.display = 'none';
+            team_element.style.display = 'block';
+            return;
+        }
+
+        if (ref == 'home') {
+            categories_element.style.display = 'none';
+            main_element.style.display = 'grid';
+            team_element.style.display = 'none';
+            return;
+        }
 }
 
 document.getElementsByClassName('button-categories')[0].addEventListener('click', () => {
-    if (document.getElementsByClassName('button-categories')[0].classList.contains('active')) return;
-    toggleCategories()
+    toggle('categories');
 });
 document.getElementsByClassName('button-home')[0].addEventListener('click', () => {
-    if (document.getElementsByClassName('button-home')[0].classList.contains('active')) return;
-    toggleCategories()
+    toggle('home');
 });
-document.getElementsByClassName('button-')
 document.getElementsByClassName('categories')[0].style.display = 'none';
 
 /* Category underline bs */
@@ -61,4 +58,11 @@ var swiper = new Swiper(".mySwiper", {
     pagination: {
         el: ".swiper-pagination",
     },
+});
+
+/* Search bar bs */
+document.getElementById('search').addEventListener('keyup', (key) => {
+    if (key.key == 'Enter') {
+        window.location.href = 'search.html';
+    }
 });

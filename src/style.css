@@ -119,7 +119,7 @@ i {
     width: 35px;
 }
 
-.input-search {
+#search {
     outline: none;
     width: 15em;
     border: 1px solid black;
@@ -132,14 +132,12 @@ i {
     display: none;
     flex-wrap: wrap;
     justify-content: center;
-    padding-top: 1em;
+    padding-top: 3vw;
+    background-image: linear-gradient(to bottom, rgb(140, 146, 151), #E3E6F3);
 }
 
 .category {
     display: flex;
-    border: 1px solid rgb(0, 0, 0, 0);
-    border-radius: .3rem;
-    background-color: red;
     width: 16vw;
     height: 16vw;
     margin-inline: 2.5vw;
@@ -149,13 +147,17 @@ i {
 .img-category {
     width: 16vw;
     height: 16vw;
+    box-shadow: 10px 10px 25px rgba(3, 35, 44, 0.6);
+    border-radius: .3rem;
 }
 
 .overlay-category {
     position: absolute;
     width: 16vw;
     height: 16vw;
-    background-color: rgba(255, 128, 149, 0.4);
+    background-color: rgb(50, 80, 50, 0.4);
+    border: 1px solid rgba(0, 0, 0, 0);
+    border-radius: .3rem;
     opacity: 0;
     transition: opacity 250ms;
 }
@@ -165,6 +167,9 @@ i {
     text-shadow: 5px 5px 5px rgb(51, 51, 51);
     position: absolute;
     font-size: 120%;
+    bottom: 20px;
+    left: 10px;
+
 }
 
 .overlay-category:hover {
@@ -179,7 +184,6 @@ i {
     grid-template-rows: 20% 15% 5% 10% 5% 10% 30%;
     align-items: center;
     background: #E3E6F3;
-
 }
 
 .main-page>h4 {
@@ -214,21 +218,23 @@ i {
 }
 
 .features {
-    height: 35vh;
+    height: max-content;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #E3E6F3;
+    background-image: linear-gradient(to bottom, #E3E6F3, #E3E6F3, #a6a8ad);
 }
 
 .swiper {
-    width: 50%;
-    height: 300px;
+    position: absolute;
+    width: 70%;
+    height: 60vh;
     position: absolute;
     left: 0%;
     top: 15%;
     margin-left: -150px;
-    margin-top: -150px;
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
 
 .swiper-slide {
