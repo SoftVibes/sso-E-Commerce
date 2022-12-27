@@ -44,7 +44,7 @@ h4 {
     font-family: 'Poppins', sans-serif;
 }
 
-*::-webkit-scrollbar { 
+*::-webkit-scrollbar {
     display: none;
 }
 
@@ -126,6 +126,37 @@ i {
     padding: 2px 3px;
 }
 
+.button-cart {
+    outline: none;
+    border: none;
+    background: #E3E6F3;
+}
+
+.button-cart::before {
+    content: ' ';
+    height: 5px;
+    width: 5px;
+    scale: 0;
+    border-radius: 100%;
+    position: absolute;
+    margin-top: 27px;
+    background-color: #1a1a1a;
+    margin-left: 10px;
+    transition: all 0.2s ease-in-out;
+}
+
+.button-cart:hover::before {
+    scale: 1;
+}
+
+.button-cart[dot='true']::before {
+    scale: 1;
+}
+
+
+
+
+
 /* Categories section */
 .categories {
     height: 90vh;
@@ -142,6 +173,7 @@ i {
     height: 16vw;
     margin-inline: 2.5vw;
     cursor: pointer;
+    transition: scale 0.2s ease-in-out;
 }
 
 .img-category {
@@ -173,7 +205,11 @@ i {
 }
 
 .overlay-category:hover {
-    opacity: 1;
+    opacity: 2;
+}
+
+.category:hover {
+    scale: 1.1;
 }
 
 /* main home page */

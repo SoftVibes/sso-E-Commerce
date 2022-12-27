@@ -3,19 +3,19 @@ categories_element = document.getElementsByClassName('categories')[0];
 main_element = document.getElementsByClassName('main-page')[0];
 team_element = document.getElementsByClassName('team')[0];
 function toggle(ref) {
-        if (ref == 'categories') {
-            categories_element.style.display = 'flex';
-            main_element.style.display = 'none';
-            team_element.style.display = 'none';
-            return;
-        }
+    if (ref == 'categories') {
+        categories_element.style.display = 'flex';
+        main_element.style.display = 'none';
+        team_element.style.display = 'none';
+        return;
+    }
 
-        if (ref == 'team') {
-            categories_element.style.display = 'none';
-            main_element.style.display = 'none';
-            team_element.style.display = 'block';
-            return;
-        }
+    if (ref == 'team') {
+        categories_element.style.display = 'none';
+        main_element.style.display = 'none';
+        team_element.style.display = 'block';
+        return;
+    }
 
         if (ref == 'home') {
             if (!window.location.href.endsWith('/index.html')) {
@@ -31,11 +31,14 @@ function toggle(ref) {
 
 document.getElementsByClassName('button-categories')[0].addEventListener('click', () => {
     if (document.getElementsByClassName('button-categories')[0].classList.contains('active')) return;
-    toggle('categories');
+    toggleCategories()
 });
 document.getElementsByClassName('button-home')[0].addEventListener('click', () => {
+    if (document.getElementsByClassName('button-home')[0].classList.contains('active')) return;
     toggle('home');
 });
+
+/* default */
 document.getElementsByClassName('categories')[0].style.display = 'none';
 
 /* Category underline bs */
@@ -48,6 +51,10 @@ for (let i = 0; i < buttons.length; i++) {
         this.classList.add('active');
     });
 }
+
+document.getElementsByClassName('button-cart')[0].addEventListener('click', () => {
+    document.getElementsByClassName('button-cart')[0].setAttribute('dot','true')
+})
 
 
 /* swiper trollin */
