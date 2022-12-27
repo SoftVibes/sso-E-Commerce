@@ -31,7 +31,7 @@ function toggle(ref) {
 
 document.getElementsByClassName('button-categories')[0].addEventListener('click', () => {
     if (document.getElementsByClassName('button-categories')[0].classList.contains('active')) return;
-    toggleCategories()
+    toggle('categories');
 });
 document.getElementsByClassName('button-home')[0].addEventListener('click', () => {
     toggle('home');
