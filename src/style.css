@@ -121,9 +121,16 @@ i {
 
 #search {
     outline: none;
-    width: 20em;
+    width: 25em;
     border: 1px solid black;
     padding: 2px 3px;
+    border-right: 0;
+}
+
+.search-icon { 
+    background-color: white;
+    border: 1px solid black;
+    border-left: 0 ;
 }
 
 .button-cart {

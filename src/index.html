@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <script src="script.js" defer></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
     <title>SSO e-commerce</title>
@@ -23,7 +25,12 @@
                 <li><button class="active button-home button-navbar">Home</button></li>
                 <li><button class="button-categories button-navbar">Categories</button></li>
                 <li><button class="button-teams button-navbar">Teams</button></li>
-                <li><input type="text" class="input-search" id="search"></li>
+                <li style="display: flex;">
+                    <input type="text" class="input-search" id="search">
+                    <span class="material-symbols-outlined search-icon">
+                        search
+                    </span>
+                </li>
                 <button class="button-cart button-navbar" dot="false"><span
                         class="material-symbols-outlined">shopping_cart</span></button>
             </ul>

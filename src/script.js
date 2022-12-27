@@ -91,6 +91,7 @@ var swiper = new Swiper(".mySwiper", {
 var swiper2 = new Swiper(".mySwiper2", {
     spaceBetween: 30,
     centeredSlides: true,
+    loop: true,
     autoplay: {
       delay: 1500,
       disableOnInteraction: false,
