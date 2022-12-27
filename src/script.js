@@ -18,7 +18,7 @@ function toggle(ref) {
         categories_element.style.display = 'none';
         main_element.style.display = 'none';
         feature_element.style.display = 'none';
-        team_element.style.display = 'block';
+        team_element.style.display = 'flex';
         return;
     }
 
@@ -88,7 +88,22 @@ var swiper = new Swiper(".mySwiper", {
     },
 });
 
-
+var swiper2 = new Swiper(".mySwiper2", {
+    spaceBetween: 30,
+    centeredSlides: true,
+    autoplay: {
+      delay: 1500,
+      disableOnInteraction: false,
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });
 
 /* Search bar bs */
 document.getElementById('search').addEventListener('keyup', (key) => {
