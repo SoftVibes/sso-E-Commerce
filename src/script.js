@@ -3,6 +3,7 @@ categories_element = document.getElementsByClassName('categories')[0];
 main_element = document.getElementsByClassName('main-page')[0];
 team_element = document.getElementsByClassName('team')[0];
 about_element = document.getElementsByClassName('about')[0];
+
 function toggle(ref) {
     var ele = null;
     switch (ref) {
@@ -27,7 +28,7 @@ function toggle(ref) {
 
 document.getElementsByClassName('button-categories')[0].addEventListener('click', () => {
     if (document.getElementsByClassName('button-categories')[0].classList.contains('active')) return;
-    toggleCategories()
+    toggle('catagories')
 });
 document.getElementsByClassName('button-home')[0].addEventListener('click', () => {
     if (document.getElementsByClassName('button-home')[0].classList.contains('active')) return;
