@@ -2,22 +2,21 @@
 categories_element = document.getElementsByClassName('categories')[0];
 main_element = document.getElementsByClassName('main-page')[0];
 team_element = document.getElementsByClassName('team')[0];
-feature_element = document.getElementsByClassName('features')[0];
 shop_now = document.getElementsByClassName('shop-now')[0];
 
 function toggle(ref) {
     if (ref == 'categories') {
         categories_element.style.display = 'flex';
+        categories_element.style.height = '90vh';
         main_element.style.display = 'none';
         team_element.style.display = 'none';
-        feature_element.style.display = 'none';
         return;
     }
 
     if (ref == 'team') {
         categories_element.style.display = 'none';
+        categories_element.style.height = '0';
         main_element.style.display = 'none';
-        feature_element.style.display = 'none';
         team_element.style.display = 'block';
         return;
     }
@@ -28,9 +27,9 @@ function toggle(ref) {
             return;
         }
         categories_element.style.display = 'none';
+        categories_element.style.height = '0';
         main_element.style.display = 'grid';
         team_element.style.display = 'none';
-        feature_element.style.display = 'flex';
         return;
     }
 }
