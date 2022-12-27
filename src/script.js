@@ -2,11 +2,13 @@
 categories_element = document.getElementsByClassName('categories')[0];
 main_element = document.getElementsByClassName('main-page')[0];
 team_element = document.getElementsByClassName('team')[0];
+feature_element = document.getElementsByClassName('features')[0];
 function toggle(ref) {
     if (ref == 'categories') {
         categories_element.style.display = 'flex';
         main_element.style.display = 'none';
         team_element.style.display = 'none';
+        feature_element.style.display = 'none';
         return;
     }
 
@@ -25,6 +27,7 @@ function toggle(ref) {
             categories_element.style.display = 'none';
             main_element.style.display = 'grid';
             team_element.style.display = 'none';
+            feature_element.style.display = 'flex';
             return;
         }
 }
