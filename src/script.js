@@ -17,17 +17,21 @@ function toggle(ref) {
         return;
     }
 
-    if (ref == 'home') {
-        categories_element.style.display = 'none';
-        main_element.style.display = 'grid';
-        team_element.style.display = 'none';
-        return;
-    }
+        if (ref == 'home') {
+            if (!window.location.href.endsWith('/index.html')) {
+                window.location.href = '/src/index.html';
+                return;
+            }
+            categories_element.style.display = 'none';
+            main_element.style.display = 'grid';
+            team_element.style.display = 'none';
+            return;
+        }
 }
 
 document.getElementsByClassName('button-categories')[0].addEventListener('click', () => {
     if (document.getElementsByClassName('button-categories')[0].classList.contains('active')) return;
-    toggle('categories')
+    toggleCategories()
 });
 document.getElementsByClassName('button-home')[0].addEventListener('click', () => {
     if (document.getElementsByClassName('button-home')[0].classList.contains('active')) return;
