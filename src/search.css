@@ -185,7 +185,7 @@ i {
 
 /* Filters and products */
 #filters {
-    width: 20vw;
+    width: 15vw;
     height: 100vh;
     padding: 5px 40px;
     background-color: #bdc0ca;
@@ -215,8 +215,8 @@ i {
     flex-wrap: wrap;
     gap: 3vw;
     padding: 10px 10px;
-    width: 80vw;
-    margin-left: 20vw;
+    width: 85vw;
+    margin-left: 15vw;
     min-height: 100vh;
     max-height: max-content;
     background-image: linear-gradient(rgb(140, 146, 151), #E3E6F3);
