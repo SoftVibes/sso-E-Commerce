@@ -153,10 +153,6 @@ i {
     scale: 1;
 }
 
-
-
-
-
 /* Categories section */
 .categories {
     height: 90vh;
@@ -261,6 +257,8 @@ i {
     background-image: linear-gradient(to bottom, #E3E6F3, #E3E6F3, #a6a8ad);
 }
 
+/* swiper stuffy */
+
 .swiper {
     position: absolute;
     width: 70%;
@@ -283,3 +281,6 @@ i {
     display: block;
     width: 100%;
 }
+
+/* teams */
+
