@@ -177,6 +177,7 @@ i {
     height: 16vw;
     margin-inline: 2.5vw;
     cursor: pointer;
+    transition: scale 0.2s ease-in-out;
 }
 
 .img-category {
@@ -209,6 +210,10 @@ i {
 
 .overlay-category:hover {
     opacity: 1;
+}
+
+.category:hover {
+    scale: 1.1;
 }
 
 
