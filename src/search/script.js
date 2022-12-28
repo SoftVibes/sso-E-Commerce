@@ -54,7 +54,6 @@ shop_now.addEventListener('click', () => {
 })
 */ 
 /* default */
-document.getElementsByClassName('categories')[0].style.display = 'none';
 
 /* Category underline bs */
 
@@ -109,18 +108,22 @@ var swiper2 = new Swiper(".mySwiper2", {
 /* Search bar bs */
 document.getElementById('search').addEventListener('keyup', (key) => {
     if (key.key == 'Enter') {
-        window.location.href = 'search.html';
+        window.location.href = 'http://localhost:8080/search';
     }
 });
 
 document.getElementsByClassName('button-cart')[0].addEventListener('click', function () {
-    window.location.href = 'cart.html';
+    window.location.href = 'http://localhost:8080/cart';
+});
+
+document.getElementsByClassName('button-categories')[0].addEventListener('click', function () {
+    window.location.href = 'http://localhost:8080/categories';
 });
 
 const search_icon = document.getElementsByClassName('search-icon')[0]
 search_icon.addEventListener('click', () => {
-    if(search_icon.value == '') return ; 
-    window.location.href = 'search.html';
+    if (search_icon.value == '') return;
+    window.location.href = 'http://localhost:8080/search';
 });
 
 
@@ -134,9 +137,35 @@ search_icon.addEventListener('click', () => {
 
 
 
-
-
-
-
-/* Implementing backend */
-fetch('http://localhost:8080/')
+/* Implementing Backend */
+url = window.location.href.split('/');
+search_keywords = url[url.length - 1].replace("+", " ");
+fetch("http://localhost:8080/find", {
+    method: 'POST',
+    headers: {
+        'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({
+        search_term: search_keywords
+    })
+}).then((res) => {
+    return res.json();
+}).then((data) => {
+    data = data[0];
+    console.log(data);
+    if (data.length == 0) {
+        document.getElementById('products').innerHTML = '<h1>No products found</h1>';
+        return;
+    }
+    for (let i = 0; i < data.length; i++) {
+        document.getElementById('products').innerHTML += `
+        <div class="product">
+            <img src="` + "http://localhost:8080/resource/img+" + `rossum.jpg" class="product-img">
+            <div class="product-overlay">
+                <p class="product-text">${data[i].name}</p>
+                <p class="product-price">${data[i].price}</p>
+            </div>
+        </div>
+        `
+    }
+});
