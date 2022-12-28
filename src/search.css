@@ -290,13 +290,18 @@ i {
     opacity: 1;
 }
 
-.product-text {
+.product-text, .product-price {
     position: absolute;
-    bottom: 5px;
-    left: 5px;
+    display: block;
+    bottom: 1em;
+    left: 1em;
     color: white;
     font-size: 120%;
     font-weight: 1500;
+}
+
+.product-text {
+    bottom: 2.5em;
 }
 
 #min-sel { 
