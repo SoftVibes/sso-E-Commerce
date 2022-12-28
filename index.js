@@ -25,11 +25,11 @@ app.get("/cart", (req, res) => {
 });
 
 app.get("/search", (req, res) => {
-    res.sendFile(__dirname + "src/search/index.html"); 
+    res.sendFile(__dirname + "/src/search/index.html"); 
 });
 
 app.get("/categories", (req, res) => {
-    res.sendFile(__dirname + "src/categories/index.html");
+    res.sendFile(__dirname + "/src/categories/index.html");
 });
 
 app.get("/resource/:path", (req, res) => {
