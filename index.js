@@ -17,8 +17,10 @@ app.listen(8080, () => {
 });
 
 app.get("/", (req, res) => {
-    res.sendFile(__dirname + "/pages/home.html");
-})
+    res.sendFile(__dirname + "/src/index.html");
+});
+
+app.get("/")
 
 // FOR ALL PRODUCTS OF A CATEGORY WITH FILTER FUNCTIONALITY
 //structure URL as : http://localhost:8080/jeans?priceRange=300,1000&size=XS,S,L
@@ -61,7 +63,7 @@ app.get("/:cat_name", (req, res) => {
         res.send(JSON.stringify(products));
     }
 
-})
+});
 
 // FOR INDIVIDUAL PRODUCT
 //structure URL as : http://localhost:8080/jeans/1
@@ -71,7 +73,7 @@ app.get("/:cat_name/:id", (req, res) => {
     products = JSON.parse(fs.readFileSync(`./data/info/${category_name}.json`));
     products_to_send = products.filter(entry => prodId === entry.id);
     res.send(JSON.stringify(products_to_send));
-})
+});
 
 app.post("/search", (req, res) => {
     searchTerms = req.body.search_term.split(" ");
@@ -100,4 +102,4 @@ app.post("/search", (req, res) => {
     res.send(JSON.stringify(products_to_send));
     */
 
-})
+});
