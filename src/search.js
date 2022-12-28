@@ -121,4 +121,22 @@ const search_icon = document.getElementsByClassName('search-icon')[0]
 search_icon.addEventListener('click', () => {
     if(search_icon.value == '') return ; 
     window.location.href = 'search.html';
-})
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Implementing backend */
+fetch('http://localhost:8080/')
