@@ -3,6 +3,8 @@ const express = require('express');
 const app = express();
 const cookieParser = require('cookie-parser');
 const cors = require('cors');
+const queryJson = require("query-json");
+const JsSearch = require('js-search');
 
 app.use(express.json());
 app.use(cors({
@@ -71,3 +73,31 @@ app.get("/:cat_name/:id", (req, res) => {
     res.send(JSON.stringify(products_to_send));
 })
 
+app.post("/search", (req, res) => {
+    searchTerms = req.body.search_term.split(" ");
+    var search = new JsSearch.Search('id');
+    search.addIndex('name');
+    search.addIndex('description');
+    const folderPath = __dirname + "/data/info";
+    console.log(folderPath);
+    files = fs.readdirSync(folderPath);
+    files.forEach(file => {
+        filePath = `${folderPath}/${file}`;
+        products = JSON.parse(fs.readFileSync(filePath));
+        search.addDocuments(products);
+    });
+    products_to_send = []
+    for (search_term of searchTerms){
+        console.log(search_term)
+        products_to_send.push(search.search(search_term))
+    }
+    res.send(JSON.stringify(products_to_send));
+
+    /*const regex = new RegExp(search_term, 'gmi');
+    result = queryJson.search(products, regex);
+        console.log(result)
+        products_to_send.push(result);
+    res.send(JSON.stringify(products_to_send));
+    */
+
+})

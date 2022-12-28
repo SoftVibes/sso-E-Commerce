@@ -7,6 +7,33 @@
         "description": "big jeans",
         "inStock": true,
         "images": ["bigJeans1.png", "bigJeans2.png"]
+    },
+    {
+        "id":2,
+        "name": "Small Jeans",
+        "size": ["M"],
+        "price": [120],
+        "description": "small jeans",
+        "inStock": true,
+        "images": ["bigJeans1.png", "bigJeans2.png"]
+    },
+    {
+        "id":3,
+        "name": "Cotton Jeans",
+        "size": ["M"],
+        "price": [120],
+        "description": "cotton jeans",
+        "inStock": true,
+        "images": ["bigJeans1.png", "bigJeans2.png"]
+    },
+    {
+        "id":4,
+        "name": "Silk? Jeans",
+        "size": ["M"],
+        "price": [120],
+        "description": "silk? jeans",
+        "inStock": true,
+        "images": ["bigJeans1.png", "bigJeans2.png"]
     }
 ]
 
