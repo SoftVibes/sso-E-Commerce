@@ -92,18 +92,18 @@ var swiper2 = new Swiper(".mySwiper2", {
     centeredSlides: true,
     loop: true,
     autoplay: {
-      delay: 1500,
-      disableOnInteraction: false,
+        delay: 1500,
+        disableOnInteraction: false,
     },
     pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
+        el: ".swiper-pagination",
+        clickable: true,
     },
     navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
     },
-  });
+});
 
 /* Search bar bs */
 document.getElementById('search').addEventListener('keyup', (key) => {
@@ -116,3 +116,8 @@ document.getElementsByClassName('button-cart')[0].addEventListener('click', func
     window.location.href = 'cart.html';
 });
 
+const search_icon = document.getElementsByClassName('search-icon')[0]
+search_icon.addEventListener('click', () => {
+    if(search_icon.value == '') return ; 
+    window.location.href = 'search.html';
+})

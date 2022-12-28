@@ -98,6 +98,32 @@ i {
     outline: none;
 }
 
+.button-cart {
+    outline: none;
+    border: none;
+    background: #E3E6F3;
+}
+
+.button-cart::before {
+    content: ' ';
+    height: 5px;
+    width: 5px;
+    scale: 0;
+    border-radius: 100%;
+    position: absolute;
+    margin-top: 27px;
+    background-color: #1a1a1a;
+    margin-left: 10px;
+    transition: all 0.2s ease-in-out;
+}
+
+.button-cart:hover::before {
+    scale: 1;
+}
+
+.button-cart[dot='true']::before {
+    scale: 1;
+}
 
 
 #symbol button::before {
@@ -122,9 +148,17 @@ i {
 
 #search {
     outline: none;
-    width: 15em;
+    width: 25em;
     border: 1px solid black;
     padding: 2px 3px;
+    border-right: 0;
+}
+
+.search-icon { 
+    background-color: white;
+    border: 1px solid black;
+    border-left: 0 ;
+    cursor: pointer;
 }
 
 /* Categories section */
@@ -219,6 +253,7 @@ i {
     margin-left: 15vw;
     min-height: 100vh;
     max-height: max-content;
+    padding-left: 4vw;
     background-image: linear-gradient(rgb(140, 146, 151), #E3E6F3);
 }
 
@@ -226,6 +261,11 @@ i {
     cursor: pointer;
     width: 17vw;
     height: 25vw;
+    transition: all 0.2s ease-in;
+}
+
+.product:hover { 
+    scale: 0.95;
 }
 .product-img {
     width: 17vw;
@@ -257,4 +297,19 @@ i {
     color: white;
     font-size: 120%;
     font-weight: 1500;
+}
+
+#min-sel { 
+    margin-left: 4vw;
+    width: 5vw;
+    text-align: center;
+    outline: none;
+}
+
+
+#max-sel { 
+    margin-left: 3.8vw;
+    width: 5vw;
+    text-align: center;
+    outline: none;
 }
