@@ -44,7 +44,7 @@ h4 {
     font-family: 'Poppins', sans-serif;
 }
 
-*::-webkit-scrollbar { 
+*::-webkit-scrollbar {
     display: none;
 }
 
@@ -229,13 +229,34 @@ i {
     background-color: green;
 }
 
-.item-list { 
+.item-list {
     position: fixed;
+    display: flex;
+    flex-direction: column;
     right: 2%;
-    height: 70vh ;
+    height: 70vh;
     width: 18vw;
-    background: black;
+    background: white;
     margin-top: 3vh;
     border-radius: 0.5rem;
-    border: 1rem pink solid;
+    box-shadow: 0 0 0rem 0.5rem white;
+    padding: 2rem;
+}
+
+.item-list h5 {
+    font-size: 1.5rem;
+    line-height: 5vh;
+}
+
+.item-list > div {
+    line-height: 5vh;
+}
+
+.payment-button {
+    margin-top: 1vh;
+    border-radius: 3rem;
+    outline: none;
+    border: none;
+    height: 4vh;
+    background-color: aqua;
 }
