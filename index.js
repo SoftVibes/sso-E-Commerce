@@ -21,7 +21,8 @@ app.get("/", (req, res) => {
 });
 
 app.get("/resource/:path", (req, res) => {
-    const
+    const path = req.params.path.replace("+", "/");
+    res.sendFile(__dirname + `/src/${path}`);
 });
 
 // FOR ALL PRODUCTS OF A CATEGORY WITH FILTER FUNCTIONALITY
