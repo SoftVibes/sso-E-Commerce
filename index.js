@@ -17,7 +17,19 @@ app.listen(8080, () => {
 });
 
 app.get("/", (req, res) => {
-    res.sendFile(__dirname + "/src/index.html");
+    res.sendFile(__dirname + "/src/home/index.html");
+});
+
+app.get("/cart", (req, res) => {
+    res.sendFile(__dirname + "/src/cart/index.html");
+});
+
+app.get("/search", (req, res) => {
+    res.sendFile(__dirname + "src/search/index.html"); 
+});
+
+app.get("/categories", (req, res) => {
+    res.sendFile(__dirname + "src/categories/index.html");
 });
 
 app.get("/resource/:path", (req, res) => {
