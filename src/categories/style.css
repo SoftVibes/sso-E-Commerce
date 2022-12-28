@@ -1,11 +1,11 @@
 /* Categories section */
 .categories {
-    height: 0;
-    display: none;
+    height: 90vh;
+    display: flex;
     flex-wrap: wrap;
     justify-content: center;
     padding-top: 3vw;
-    background-image: linear-gradient(to bottom, rgb(140, 146, 151), #E3E6F3);
+    background:#E3E6F3;
     transition: all 0.25s ease-in-out;
 }
 
