@@ -112,6 +112,7 @@ var swiper2 = new Swiper(".mySwiper2", {
 /* Search bar bs */
 document.getElementById('search').addEventListener('keyup', (key) => {
     if (key.key == 'Enter') {
+        document.cookie = `search=`;
         window.location.href = 'search.html';
     }
 });
