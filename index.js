@@ -20,7 +20,9 @@ app.get("/", (req, res) => {
     res.sendFile(__dirname + "/src/index.html");
 });
 
-app.get("/")
+app.get("/resource/:path", (req, res) => {
+    const
+});
 
 // FOR ALL PRODUCTS OF A CATEGORY WITH FILTER FUNCTIONALITY
 //structure URL as : http://localhost:8080/jeans?priceRange=300,1000&size=XS,S,L
