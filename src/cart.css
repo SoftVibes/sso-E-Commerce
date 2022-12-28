@@ -180,3 +180,48 @@ i {
 .category:hover {
     scale: 1.1;
 }
+
+#items {
+    background-color: #babcc4;
+    display: flex;
+    flex-direction: column;
+    padding: 1em 8em;
+    min-height: 90vh;
+}
+
+.item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #8e9096;
+    border-radius: .5rem;
+    cursor: pointer;
+    transition: scale 0.1s ease-in-out;
+    padding: 1em 1em;
+    font-size: 120%;
+    font-weight: 1200;
+    margin: 1em 0;
+}
+
+.item * {
+    margin: 0 3em;
+}
+
+.img-item {
+    width: 10em;
+    height: 10em;
+    border: 1px solid black;
+    border-radius: .3rem;
+}
+
+.item:hover {
+    scale: 1.05;
+}
+
+.item p {
+    background-color: green;
+}
+
+#details {
+    position: sticky;
+}
