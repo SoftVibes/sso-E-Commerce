@@ -259,4 +259,10 @@ i {
     border: none;
     height: 4vh;
     background-color: aqua;
+    transition: all 0.15s ease-in-out;
+}
+
+.payment-button:hover { 
+    cursor: pointer;
+    background-color: rgb(157, 221, 221);
 }
