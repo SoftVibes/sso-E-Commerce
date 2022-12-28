@@ -26,7 +26,7 @@ function toggle(ref) {
 
     if (ref == 'home') {
         if (!window.location.href.endsWith('/index.html')) {
-            window.location.href = '/src/index.html';
+            window.location.href = '../home/index.html';
             return;
         }
         categories_element.style.display = 'none';
@@ -113,16 +113,16 @@ var swiper2 = new Swiper(".mySwiper2", {
 document.getElementById('search').addEventListener('keyup', (key) => {
     if (key.key == 'Enter') {
         document.cookie = `search=`;
-        window.location.href = 'search.html';
+        window.location.href = '../search/search.html';
     }
 });
 
 document.getElementsByClassName('button-cart')[0].addEventListener('click', function () {
-    window.location.href = 'cart.html';
+    window.location.href = '../cart/cart.html';
 });
 
 const search_icon = document.getElementsByClassName('search-icon')[0]
 search_icon.addEventListener('click', () => {
     if (search_icon.value == '') return;
-    window.location.href = 'search.html';
+    window.location.href = '../search/search.html';
 })
