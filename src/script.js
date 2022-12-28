@@ -3,6 +3,7 @@ categories_element = document.getElementsByClassName('categories')[0];
 main_element = document.getElementsByClassName('main-page')[0];
 team_element = document.getElementsByClassName('team')[0];
 shop_now = document.getElementsByClassName('shop-now')[0];
+features_element = document.getElementsByClassName('features')[0];
 
 function toggle(ref) {
     if (ref == 'categories') {
@@ -10,6 +11,7 @@ function toggle(ref) {
         categories_element.style.height = '90vh';
         main_element.style.display = 'none';
         team_element.style.display = 'none';
+        features_element.style.display = 'none';
         return;
     }
 
@@ -18,6 +20,7 @@ function toggle(ref) {
         categories_element.style.height = '0';
         main_element.style.display = 'none';
         team_element.style.display = 'flex';
+        features_element.style.display = 'none';
         return;
     }
 
@@ -30,6 +33,7 @@ function toggle(ref) {
         categories_element.style.height = '0';
         main_element.style.display = 'grid';
         team_element.style.display = 'none';
+        features_element.style.display = 'flex';
         return;
     }
 }
@@ -118,6 +122,6 @@ document.getElementsByClassName('button-cart')[0].addEventListener('click', func
 
 const search_icon = document.getElementsByClassName('search-icon')[0]
 search_icon.addEventListener('click', () => {
-    if(search_icon.value == '') return ; 
+    if (search_icon.value == '') return;
     window.location.href = 'search.html';
 })
