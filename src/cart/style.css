@@ -200,10 +200,11 @@ i {
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: space-between;
     background-color: #8e9096;
     border-radius: .5rem;
     cursor: pointer;
-    transition: scale 0.1s ease-in-out;
+    transition: scale 0.15s ease-in-out;
     padding: 1em 1em;
     font-size: 120%;
     font-weight: 1200;
@@ -225,9 +226,6 @@ i {
     scale: 1.05;
 }
 
-.item p {
-    background-color: green;
-}
 
 .item-list {
     position: fixed;
@@ -281,4 +279,69 @@ i {
     gap: 2vh;
     margin-top: 3vh;
     margin-left: 0.5vw;
+}
+
+.item-wrapper { 
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    height: 90%;
+    margin: 0;
+}
+
+.flex { 
+    display: flex;
+}
+
+.another-wrapper { 
+    margin: 0;
+    flex-direction: column;
+    justify-content:flex-end;
+    gap: 2rem;
+}
+
+.cost-item { 
+    text-align: right;
+    margin: 0;
+}
+
+#cost-per-item-wrapper { 
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+#cost-per-item-wrapper > p { 
+    margin: 0;
+}
+
+.another-wrapper > p { 
+    margin: 0;
+}
+
+.another-wrapper > select{ 
+    margin: 0;
+}
+
+.name-item { 
+    text-align: left;
+    margin-left: 0;
+}
+
+.description { 
+    margin-left: 0;
+}
+
+.total-cost-item { 
+    margin: 0;
+    text-align: right;
+}
+
+.quantity-wrapper {
+    margin: 0;
+    gap: 1rem;
+}
+
+.another-wrapper * { 
+    margin: 0;
 }
