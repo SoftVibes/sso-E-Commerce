@@ -119,20 +119,23 @@ fetch("http://localhost:8080/find", {
     return res.json();
 }).then((data) => {
     data = data[0];
-    console.log(data);
     if (data.length == 0) {
         document.getElementById('products').innerHTML = `<h1>No products found for "${search_keywords.replace("+", " ")}"</h1>`;
         return;
     }
     for (let i = 0; i < data.length; i++) {
-        document.getElementById('products').innerHTML += `
-        <div class="product">
+        p = document.createElement('div');
+        p.classList.add('product');
+        p.innerHTML = `
             <img src="` + "http://localhost:8080/resource/img+" + `rossum.jpg" class="product-img">
             <div class="product-overlay">
                 <p class="product-text">${data[i].name}</p>
                 <p class="product-price">${data[i].price}</p>
             </div>
-        </div>
-        `
+        `;
+        p.addEventListener('click', () => {
+            window.location.href = `http://localhost:8080/product/${data[i].category}/${data[i].id}`;
+        });
+        document.getElementById('products').appendChild(p);
     }
 });

@@ -32,6 +32,10 @@ app.get("/categories", (req, res) => {
     res.sendFile(__dirname + "/src/categories/index.html");
 });
 
+app.get("/product/:category/:id", (req, res) => {
+    res.sendFile(__dirname + "/src/product/index.html");
+});
+
 app.get("/resource/:path", (req, res) => {
     const path = req.params.path.replace("+", "/");
     res.sendFile(__dirname + `/src/${path}`);
@@ -123,3 +127,22 @@ app.post("/find", (req, res) => {
     */
 
 });
+
+
+const axios = require('axios')
+const csv=require('csvtojson')
+
+async function getData () {
+    console.log("Updated data");
+    base_link = "https://docs.google.com/spreadsheets/d/1RQji3es53OqQgoq_XAtZdu3j9zoezkSfpSI1P7qojgE/gviz/tq?tqx=out:csv&sheet="
+    cat_res = await axios.get(`${base_link}Categories`)
+    categories = cat_res.data.replace(/"([^"]+(?="))"/g, '$1').split("\n")
+    console.log(categories)
+    for (category of categories){
+        res = await axios.get(`${base_link}${category}`)
+        jsonObj = await csv().fromString(res.data);
+        fs.writeFileSync(`./data/info/${category}.json`, JSON.stringify(jsonObj)) ;
+    }
+}
+
+setInterval(getData, 1000*60*30);
