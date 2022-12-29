@@ -110,6 +110,9 @@ app.post("/find", (req, res) => {
         filePath = `${folderPath}/${files[i]}`;
         console.log(filePath);
         products = JSON.parse(fs.readFileSync(filePath));
+        for (let j = 0; j < products.length; j++) {
+            products[j].category = files[i].replace(".json", "");
+        }
         search.addDocuments(products);
     }
     products_to_send = []

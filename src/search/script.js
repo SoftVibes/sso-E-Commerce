@@ -119,6 +119,7 @@ fetch("http://localhost:8080/find", {
     return res.json();
 }).then((data) => {
     data = data[0];
+    console.log(data);
     if (data.length == 0) {
         document.getElementById('products').innerHTML = `<h1>No products found for "${search_keywords.replace("+", " ")}"</h1>`;
         return;
