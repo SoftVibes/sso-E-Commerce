@@ -5,45 +5,6 @@ team_element = document.getElementsByClassName('team')[0];
 feature_element = document.getElementsByClassName('features')[0];
 shop_now = document.getElementsByClassName('shop-now')[0];
 
-function toggle(ref) {
-    if (ref == 'categories') {
-        categories_element.style.display = 'flex';
-        main_element.style.display = 'none';
-        team_element.style.display = 'none';
-        feature_element.style.display = 'none';
-        return;
-    }
-
-    if (ref == 'team') {
-        categories_element.style.display = 'none';
-        main_element.style.display = 'none';
-        feature_element.style.display = 'none';
-        team_element.style.display = 'flex';
-        return;
-    }
-
-    if (ref == 'home') {
-        if (!window.location.href.endsWith('/index.html')) {
-            window.location.href = '/src/index.html';
-            return;
-        }
-        categories_element.style.display = 'none';
-        main_element.style.display = 'grid';
-        team_element.style.display = 'none';
-        feature_element.style.display = 'flex';
-        return;
-    }
-}
-
-document.getElementsByClassName('button-categories')[0].addEventListener('click', () => {
-    if (document.getElementsByClassName('button-categories')[0].classList.contains('active')) return;
-    toggle('categories');
-});
-document.getElementsByClassName('button-home')[0].addEventListener('click', () => {
-    if (document.getElementsByClassName('button-home')[0].classList.contains('active')) return;
-    toggle('home');
-});
-
 /*document.getElementsByClassName('button-teams')[0].addEventListener('click', () => {
     if (document.getElementsByClassName('button-teams')[0].classList.contains('active')) return;
     toggle('team');
@@ -106,9 +67,10 @@ var swiper2 = new Swiper(".mySwiper2", {
 });
 
 /* Search bar bs */
-document.getElementById('search').addEventListener('keyup', (key) => {
+document.getElementsByClassName('input-search')[0].addEventListener('keyup', (key) => {
     if (key.key == 'Enter') {
-        window.location.href = 'http://localhost:8080/search';
+        keywords = document.getElementsByClassName('input-search')[0].value.replace(" ", "+");
+        window.location.href = `http://localhost:8080/search/${keywords}`;
     }
 });
 
@@ -118,6 +80,10 @@ document.getElementsByClassName('button-cart')[0].addEventListener('click', func
 
 document.getElementsByClassName('button-categories')[0].addEventListener('click', function () {
     window.location.href = 'http://localhost:8080/categories';
+});
+
+document.getElementsByClassName('button-home')[0].addEventListener('click', function () {
+    window.location.href = 'http://localhost:8080/';
 });
 
 const search_icon = document.getElementsByClassName('search-icon')[0]
@@ -140,6 +106,7 @@ search_icon.addEventListener('click', () => {
 /* Implementing Backend */
 url = window.location.href.split('/');
 search_keywords = url[url.length - 1].replace("+", " ");
+document.getElementsByClassName('input-search')[0].value = search_keywords.replace("+", " ");
 fetch("http://localhost:8080/find", {
     method: 'POST',
     headers: {
@@ -154,7 +121,7 @@ fetch("http://localhost:8080/find", {
     data = data[0];
     console.log(data);
     if (data.length == 0) {
-        document.getElementById('products').innerHTML = '<h1>No products found</h1>';
+        document.getElementById('products').innerHTML = `<h1>No products found for "${search_keywords.replace("+", " ")}"</h1>`;
         return;
     }
     for (let i = 0; i < data.length; i++) {

@@ -39,7 +39,7 @@ app.get("/resource/:path", (req, res) => {
 
 // FOR ALL PRODUCTS OF A CATEGORY WITH FILTER FUNCTIONALITY
 //structure URL as : http://localhost:8080/jeans?priceRange=300,1000&size=XS,S,L
-app.get("/category/:cat_name", (req, res) => {
+app.get("/cat/:cat_name", (req, res) => {
     category_name = req.params.cat_name;
     products = JSON.parse(fs.readFileSync(`./data/info/${category_name}.json`));
     if (Object.keys(req.query).length != 0) {
@@ -82,7 +82,7 @@ app.get("/category/:cat_name", (req, res) => {
 
 // FOR INDIVIDUAL PRODUCT
 //structure URL as : http://localhost:8080/jeans/1
-app.get("/category/:cat_name/:id", (req, res) => {
+app.get("/cat/:cat_name/:id", (req, res) => {
     category_name = req.params.cat_name;
     prodId = parseInt(req.params.id);
     products = JSON.parse(fs.readFileSync(`./data/info/${category_name}.json`));
