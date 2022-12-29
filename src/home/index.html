@@ -14,18 +14,43 @@
     <link rel="stylesheet" href="http://localhost:8080/resource/home+style.css">
     <link rel="stylesheet" href="http://localhost:8080/resource/home+product-slider.css">
 
+    <!-- nav -->
+    <link rel="stylesheet" href="http://localhost:8080/resource/home+nav.css">
+
+
     
-    <title>SSO e-commerce</title>
+    <title>Home : WearPoseClick</title>
 </head>
 
 <body>
     
-    <nav class="section__navbar">
-        <a href="#"><i class="fas fa-bars"></i></a>
-        <h2 id="taatghor">taatghor</h2>
-        <a href="search/search.html" id='search-button' ><i class="fas fa-search"></i></a>
-        <a href="#"><i class="fas fa-shopping-cart"></i></a>
-    </nav>
+    <header class="header" id="header">
+        <nav class="navbar container">
+           <a href="./index.html" class="brand">WearPoseClick</a>
+           <div class="burger" id="burger">
+              <span class="burger-line"></span>
+              <span class="burger-line"></span>
+              <span class="burger-line"></span>
+           </div>
+           <span class="overlay"></span>
+           <div class="menu" id="menu">
+              <ul class="menu-inner">
+                 <li class="menu-item"><a class="menu-link" href="#">Home</a></li>
+                 <li class="menu-item"><a class="menu-link" href="#">Categories</a></li>
+                 <li class="menu-item"><a class="menu-link" href="#">Team</a></li>
+                 <li class="menu-item"><a class="menu-link" href="#">Shopping Cart</a></li>
+                 
+              </ul>
+           </div>
+           <span><i class="fas fa-search search-toggle"></i></span>
+           <div class="search-block">
+              <form class="search-form">
+                 <span><i class="fas fa-arrow-left search-cancel"></i></span>
+                 <input type="search" name="search" class="search-input" placeholder="Search here...">
+              </form>
+           </div>
+        </nav>
+     </header>
     <main>
 
         <section class="section__slider">
@@ -44,7 +69,7 @@
         </section>
 
         <section class="section__product-row-1">
-            <h2 class='heading-product-slider' id='just-for-you'>Just for you</h2>
+            <h2 class='heading-product-slider' id='just-for-you'>Latest Drop</h2>
             <section class="slidey">
               <div class="product-swiper swiper">
                 <div class="swiper-wrapper swiper-wrapper-two">
@@ -53,7 +78,7 @@
                     <div class="product-details">
                       <div class="price-heart">
                         <span id="price">$35.0</span>
-                        <i class="fas fa-heart"></i>
+                        <!-- <i class="fas fa-heart"></i> -->
                       </div>
                       <span id="seller">Kali Productions</span>
                     </div>
@@ -85,7 +110,7 @@
         </section>
         
         <section class="section__product-row-1">
-          <h2 class='heading-product-slider' id='just-for-you'>Trending now</h2>
+          <h2 class='heading-product-slider' id='just-for-you'>Featured Products</h2>
           <section class="slidey">
             <div class="product-swiper swiper">
               <div class="swiper-wrapper swiper-wrapper-two">
@@ -94,7 +119,7 @@
                   <div class="product-details">
                     <div class="price-heart">
                       <span id="price">$35.0</span>
-                      <i class="fas fa-heart"></i>
+                      <!-- <i class="fas fa-heart"></i> -->
                     </div>
                     <span id="seller">Kali Productions</span>
                   </div>
@@ -129,6 +154,6 @@
 </body>
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 <script src="http://localhost:8080/resource/home+frontend-script.js"></script>
-
-
+<!-- nav -->
+<script src="http://localhost:8080/resource/home+nav.js"></script>
 </html>
