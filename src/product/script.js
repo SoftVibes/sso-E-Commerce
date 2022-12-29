@@ -28,11 +28,10 @@ fetch(`http://localhost:8080/cat/${category}/${id}` , {
 }).then((res) => {
     return res.json();
 }).then((data) => {
-    data = data[0];
-    document.getElementsByClassName('product-title')[0].innerHTML = data.title;
-    document.getElementsByClassName('product-price')[0].innerHTML = `$${data.price}`;
-    document.getElementsByClassName('product-description')[0].innerHTML = data.description;
-    document.getElementsByClassName('product-image')[0].src = data.image;
+    document.getElementById('product-name').innerHTML = data.name;
+    document.getElementById('product-price').innerHTML = `$${data.price}`;
+    document.getElementById('product-description').innerHTML = data.description;
+    //document.getElementsByClassName('product-image')[0].src = data.image;
     document.getElementsByClassName('button-add-to-cart')[0].addEventListener('click', () => {
         cookies = document.cookie.split('=')[1];
         if (cookies != undefined) {
@@ -42,5 +41,8 @@ fetch(`http://localhost:8080/cat/${category}/${id}` , {
         } else {
             document.cookie = `cart=[${JSON.stringify(data)}]`;
         }
+        document.getElementsByClassName('button-add-to-cart')[0].innerHTML = '✓ Added to Cart!';
+        document.getElementsByClassName('button-add-to-cart')[0].style.backgroundColor = 'green';
+        document.getElementsByClassName('button-add-to-cart')[0].removeEventListener('click', () => {});
     });
 });

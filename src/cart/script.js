@@ -88,18 +88,19 @@ if (cookie == undefined) {
     console.log(cookie);
     document.getElementById('items').innerHTML = '';
     for (let i = 0; i < cookie.length; i++) {
-        document.getElementById('items').innerHTML += `
-        <div class="item">
-            <div class="item-image  ${cookie[i].color}">
-                <img src="${cookie[i].image}" alt="">
+        e = document.createElement('div');
+        e.classList.add('item');
+        e.innerHTML = `
+            <img-class="details-img" src="http://localhost:8080/resource/img+mens.jpg">
+            <div class="details">
+                <div class="details-heading"> ${cookie[i].name} </div>
+                <div class="details-price"> ${cookie[i].price} </div>
+                <div class="details-quantity" style="display: flex; align-items: center;">Quantity: <input  class="quantity-details" type="number" min="1" step="1" value="1" name="" id=""></div>
             </div>
-            <div class="item-info">
-                <h3>${cookie[i].name}</h3>
-                <p>${cookie[i].color}</p>
-                <p>${cookie[i].size}</p>
-                <p>${cookie[i].price}</p>
-            </div>
-        </div>
         `;
+        e.addEventListener('click', () => {
+            window.location.href = `http://localhost:8080/product/${cookie[i].category}/${cookie[i].id}`;
+        });
+        document.getElementById('items').appendChild(e);
     }
 }

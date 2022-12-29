@@ -46,6 +46,9 @@ app.get("/resource/:path", (req, res) => {
 app.get("/cat/:cat_name", (req, res) => {
     category_name = req.params.cat_name;
     products = JSON.parse(fs.readFileSync(`./data/info/${category_name}.json`));
+    for (var i = 0; i < products.length; i++) {
+        products[i].category = category_name;
+    }
     if (Object.keys(req.query).length != 0) {
         if (req.query.priceRange) {
             priceRange = req.query.priceRange.split(",").map(Number);
@@ -89,8 +92,14 @@ app.get("/cat/:cat_name", (req, res) => {
 app.get("/cat/:cat_name/:id", (req, res) => {
     category_name = req.params.cat_name;
     prodId = parseInt(req.params.id);
-    products = JSON.parse(fs.readFileSync(`./data/info/${category_name}.json`));
-    products_to_send = products.filter(entry => prodId === entry.id);
+    products = JSON.parse(fs.readFileSync(__dirname + `/data/info/${category_name}.json`));
+    for (var i = 0; i < products.length; i++) {
+        if (products[i].id == prodId) {
+            products_to_send = products[i];
+            break;
+        }
+    }
+    products_to_send.category = category_name;
     res.send(JSON.stringify(products_to_send));
 });
 
@@ -149,3 +158,17 @@ async function getData () {
 }
 
 setInterval(getData, 1000*60*30);
+
+//Cookies 
+app.post("/cookies", (req, res) => {
+    const { product, action } = req.body;
+    products = req.cookies.products;
+    if (action == 'add') {
+        if (products) {
+            products.push(product);
+        } else {
+            products = [product];
+        }
+        res.cookie('products')
+    }
+}
