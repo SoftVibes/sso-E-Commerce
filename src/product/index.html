@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="http://localhost:8080/resource/product+style.css">
+    <script src="http://localhost:8080/resource/product+script.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    <title>SSO e-commerce</title>
+</head>
+<body>
+    <section id="header">
+        <a href="#" id="logo-a"><img src="http://localhost:8080/resource/img+logo.png" class="logo" alt=""></a>
+
+        <div>
+            <ul id="navbar">
+                <li><button class="active button-home button-navbar">Home</button></li>
+                <li><button class="button-categories button-navbar">Categories</button></li>
+                <li style="display: flex;">
+                    <input type="text" class="input-search" id="search">
+                    <span class="material-symbols-outlined search-icon">
+                        search
+                    <span/>
+                </li>
+                <button class="button-cart button-navbar" dot="false"><span
+                        class="material-symbols-outlined">shopping_cart</span></button>
+            </ul>
+        </div>
+    </section>
+
+    <section id="main">
+        <div id="product-images">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="http://localhost:8080/resource/img+product.png" alt=""></div>
+                    <div class="swiper-slide"><img src="http://localhost:8080/resource/img+product.png" alt=""></div>
+                    <div class="swiper-slide"><img src="http://localhost:8080/resource/img+product.png" alt=""></div>
+                    <div class="swiper-slide"><img src="http://localhost:8080/resource/img+product.png" alt=""></div>
+                    <div class="swiper-slide"><img src="http://localhost:8080/resource/img+product.png" alt=""></div>
+                    <div class="swiper-slide"><img src="http://localhost:8080/resource/img+product.png" alt=""></div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+        <div id="product-data>
+            <h1 id="product-name">Some Product</h1>
+            <h2 id="product-description">Product Description</h2>
+            <h3 id="product-price">Price: $100</h3>
+            <div id="product-quantity">
+                <input type="number" class="input-quantity" value="1">
+            </div>
+            <button class="button-add-to-cart">Add to cart</button>
+        </div>
+    </section>
+</body>
+</html>

@@ -5,9 +5,6 @@ team_element = document.getElementsByClassName('team')[0];
 shop_now = document.getElementsByClassName('shop-now')[0];
 features_element = document.getElementsByClassName('features')[0];
 
-/* default */
-document.getElementsByClassName('categories')[0].style.display = 'none';
-
 /* Category underline bs */
 
 buttons = document.getElementsByClassName('button-navbar');
@@ -76,10 +73,4 @@ document.getElementsByClassName('button-categories')[0].addEventListener('click'
 
 document.getElementsByClassName('button-home')[0].addEventListener('click', function () {
     window.location.href = 'http://localhost:8080/';
-});
-
-const search_icon = document.getElementsByClassName('search-icon')[0]
-search_icon.addEventListener('click', () => {
-    if (search_icon.value == '') return;
-    window.location.href = 'http://localhost:8080/search';
 });
