@@ -5,108 +5,130 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="http://localhost:8080/resource/home+style.css">
     <script src="http://localhost:8080/resource/home+script.js" defer></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-    <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+
+    <!-- Frontend -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" crossorigin="anonymous">
+     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+
+    <link rel="stylesheet" href="http://localhost:8080/resource/home+style.css">
+    <link rel="stylesheet" href="http://localhost:8080/resource/home+product-slider.css">
+
+    
     <title>SSO e-commerce</title>
 </head>
 
 <body>
-    <section id="header">
-        <a href="#" id="logo-a"><img src="http://localhost:8080/resource/img+logo.png" class="logo" alt=""></a>
-
-        <div>
-            <ul id="navbar">
-                <li><button class="active button-home button-navbar">Home</button></li>
-                <li><button class="button-categories button-navbar">Categories</button></li>
-                <li><button class="button-teams button-navbar">Teams</button></li>
-                <li style="display: flex;">
-                    <input type="text" class="input-search" id="search">
-                    <span class="material-symbols-outlined search-icon">
-                        search
-                    <span/>
-                </li>
-                <button class="button-cart button-navbar" dot="false"><span
-                        class="material-symbols-outlined">shopping_cart</span></button>
-            </ul>
-        </div>
-    </section>
-
-    <section class="main-page">
-        <h4>Trade-in-offer</h4>
-        <h2>Super value deals</h2>
-        <h1>On all products</h1>
-        <p>Save more with coupons & up to 70% off !</p>
-        <button class="shop-now">Shop Now</button>
-    </section>
-
     
+    <nav class="section__navbar">
+        <a href="#"><i class="fas fa-bars"></i></a>
+        <h2 id="taatghor">taatghor</h2>
+        <a href="search/search.html" id='search-button' ><i class="fas fa-search"></i></a>
+        <a href="#"><i class="fas fa-shopping-cart"></i></a>
+    </nav>
+    <main>
 
-    <!--   teams page    -->
+        <section class="section__slider">
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">Slide 1(img goes here)</div>
+                  <div class="swiper-slide">Slide 2</div>
+                  <div class="swiper-slide">Slide 3</div>
+                  <div class="swiper-slide">Slide 4</div>
+                  <div class="swiper-slide">Slide 5</div>
+                </div>
+                <!-- <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div> -->
+                <div class="swiper-pagination"></div>
+              </div>
+        </section>
 
-    <section class="team">
-        <div class="swiper1 mySwiper2">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    <img src="http://localhost:8080/resource/img+download.jfif" alt="">
+        <section class="section__product-row-1">
+            <h2 class='heading-product-slider' id='just-for-you'>Just for you</h2>
+            <section class="slidey">
+              <div class="product-swiper swiper">
+                <div class="swiper-wrapper swiper-wrapper-two">
+                  <div class="swiper-slide-two swiper-slide">
+                    <div class="product-image"></div>
+                    <div class="product-details">
+                      <div class="price-heart">
+                        <span id="price">$35.0</span>
+                        <i class="fas fa-heart"></i>
+                      </div>
+                      <span id="seller">Kali Productions</span>
+                    </div>
+                  </div>
+                  <div class="swiper-slide-two swiper-slide">Slide 2</div>
+                  <div class="swiper-slide-two swiper-slide">Slide 3</div>
+                  <div class="swiper-slide-two swiper-slide">Slide 4</div>
+                  <div class="swiper-slide-two swiper-slide">Slide 5</div>
+                  <div class="swiper-slide-two swiper-slide">Slide 6</div>
+                  <div class="swiper-slide-two swiper-slide">Slide 7</div>
+                  <div class="swiper-slide-two swiper-slide">Slide 8</div>
+                  <div class="swiper-slide-two swiper-slide">Slide 9</div>
                 </div>
-                <div class="swiper-slide">
-                    <img src="http://localhost:8080/resource/img+download.jfif" alt="">
+          
+                  <div class="swiper-button-next product-swiper-button-next">
+                      <svg id="next-svg" viewBox="0 0 38 38" fill="none">
+                          <path d="M15.5117 6.65495L12.9883 9.17838C12.6749 9.49175 12.5182 9.86285 12.5182 10.2917C12.5182 10.7205 12.6749 11.0916 12.9883 11.4049L20.5833 19L12.9883 26.5951C12.6749 26.9084 12.5182 27.2795 12.5182 27.7083C12.5182 28.1372 12.6749 28.5082 12.9883 28.8216L15.5117 31.3451C15.8251 31.6584 16.1962 31.8151 16.625 31.8151C17.0538 31.8151 17.4249 31.6584 17.7383 31.3451L28.9701 20.1133C29.2834 19.7999 29.4401 19.4288 29.4401 19C29.4401 18.5712 29.2834 18.2001 28.9701 17.8867L17.7383 6.65495C17.4249 6.34158 17.0538 6.1849 16.625 6.1849C16.1962 6.1849 15.8251 6.34158 15.5117 6.65495ZM-9.53674e-07 19C-9.53674e-07 15.553 0.849391 12.3739 2.54818 9.46289C4.24696 6.55187 6.55187 4.24696 9.46289 2.54818C12.3739 0.849391 15.553 -9.53674e-07 19 -9.53674e-07C22.447 -9.53674e-07 25.6261 0.849391 28.5371 2.54818C31.4481 4.24696 33.753 6.55187 35.4518 9.46289C37.1506 12.3739 38 15.553 38 19C38 22.447 37.1506 25.6261 35.4518 28.5371C33.753 31.4481 31.4481 33.753 28.5371 35.4518C25.6261 37.1506 22.447 38 19 38C15.553 38 12.3739 37.1506 9.46289 35.4518C6.55187 33.753 4.24696 31.4481 2.54818 28.5371C0.849391 25.6261 -9.53674e-07 22.447 -9.53674e-07 19Z" fill="#3B3B3B"/>
+                      </svg>
+                  </div>
+          
+                  <div class="swiper-button-prev product-swiper-button-prev">
+                      <svg id="prev-svg" viewBox="0 0 28 28" fill="none">
+                          <path d="M16.5703 23.0964L18.4297 21.237C18.6606 21.0061 18.776 20.7326 18.776 20.4167C18.776 20.1007 18.6606 19.8273 18.4297 19.5964L12.8333 14L18.4297 8.40365C18.6606 8.17274 18.776 7.89931 18.776 7.58333C18.776 7.26736 18.6606 6.99392 18.4297 6.76302L16.5703 4.90365C16.3394 4.67274 16.066 4.55729 15.75 4.55729C15.434 4.55729 15.1606 4.67274 14.9297 4.90365L6.65365 13.1797C6.42274 13.4106 6.30729 13.684 6.30729 14C6.30729 14.316 6.42274 14.5894 6.65365 14.8203L14.9297 23.0964C15.1606 23.3273 15.434 23.4427 15.75 23.4427C16.066 23.4427 16.3394 23.3273 16.5703 23.0964ZM28 14C28 16.5399 27.3741 18.8824 26.1224 21.0273C24.8707 23.1723 23.1723 24.8707 21.0273 26.1224C18.8824 27.3741 16.5399 28 14 28C11.4601 28 9.11762 27.3741 6.97266 26.1224C4.82769 24.8707 3.12934 23.1723 1.8776 21.0273C0.625868 18.8824 0 16.5399 0 14C0 11.4601 0.625868 9.11762 1.8776 6.97266C3.12934 4.82769 4.82769 3.12934 6.97266 1.8776C9.11762 0.625868 11.4601 0 14 0C16.5399 0 18.8824 0.625868 21.0273 1.8776C23.1723 3.12934 24.8707 4.82769 26.1224 6.97266C27.3741 9.11762 28 11.4601 28 14Z" fill="#3B3B3B"/>
+                      </svg>
+                  </div>
+          
+              </div>
+            </section>      
+        </section>
+        
+        <section class="section__product-row-1">
+          <h2 class='heading-product-slider' id='just-for-you'>Trending now</h2>
+          <section class="slidey">
+            <div class="product-swiper swiper">
+              <div class="swiper-wrapper swiper-wrapper-two">
+                <div class="swiper-slide-two swiper-slide">
+                  <div class="product-image"></div>
+                  <div class="product-details">
+                    <div class="price-heart">
+                      <span id="price">$35.0</span>
+                      <i class="fas fa-heart"></i>
+                    </div>
+                    <span id="seller">Kali Productions</span>
+                  </div>
                 </div>
-                <div class="swiper-slide">
-                    <img src="http://localhost:8080/resource/img+download.jfif" alt="">
+                <div class="swiper-slide-two swiper-slide">Slide 2</div>
+                <div class="swiper-slide-two swiper-slide">Slide 3</div>
+                <div class="swiper-slide-two swiper-slide">Slide 4</div>
+                <div class="swiper-slide-two swiper-slide">Slide 5</div>
+                <div class="swiper-slide-two swiper-slide">Slide 6</div>
+                <div class="swiper-slide-two swiper-slide">Slide 7</div>
+                <div class="swiper-slide-two swiper-slide">Slide 8</div>
+                <div class="swiper-slide-two swiper-slide">Slide 9</div>
+              </div>
+        
+                <div class="swiper-button-next product-swiper-button-next">
+                    <svg id="next-svg" viewBox="0 0 38 38" fill="none">
+                        <path d="M15.5117 6.65495L12.9883 9.17838C12.6749 9.49175 12.5182 9.86285 12.5182 10.2917C12.5182 10.7205 12.6749 11.0916 12.9883 11.4049L20.5833 19L12.9883 26.5951C12.6749 26.9084 12.5182 27.2795 12.5182 27.7083C12.5182 28.1372 12.6749 28.5082 12.9883 28.8216L15.5117 31.3451C15.8251 31.6584 16.1962 31.8151 16.625 31.8151C17.0538 31.8151 17.4249 31.6584 17.7383 31.3451L28.9701 20.1133C29.2834 19.7999 29.4401 19.4288 29.4401 19C29.4401 18.5712 29.2834 18.2001 28.9701 17.8867L17.7383 6.65495C17.4249 6.34158 17.0538 6.1849 16.625 6.1849C16.1962 6.1849 15.8251 6.34158 15.5117 6.65495ZM-9.53674e-07 19C-9.53674e-07 15.553 0.849391 12.3739 2.54818 9.46289C4.24696 6.55187 6.55187 4.24696 9.46289 2.54818C12.3739 0.849391 15.553 -9.53674e-07 19 -9.53674e-07C22.447 -9.53674e-07 25.6261 0.849391 28.5371 2.54818C31.4481 4.24696 33.753 6.55187 35.4518 9.46289C37.1506 12.3739 38 15.553 38 19C38 22.447 37.1506 25.6261 35.4518 28.5371C33.753 31.4481 31.4481 33.753 28.5371 35.4518C25.6261 37.1506 22.447 38 19 38C15.553 38 12.3739 37.1506 9.46289 35.4518C6.55187 33.753 4.24696 31.4481 2.54818 28.5371C0.849391 25.6261 -9.53674e-07 22.447 -9.53674e-07 19Z" fill="#3B3B3B"/>
+                    </svg>
                 </div>
-                <div class="swiper-slide">
-                    <img src="http://localhost:8080/resource/img+download.jfif" alt="">
+        
+                <div class="swiper-button-prev product-swiper-button-prev">
+                    <svg id="prev-svg" viewBox="0 0 28 28" fill="none">
+                        <path d="M16.5703 23.0964L18.4297 21.237C18.6606 21.0061 18.776 20.7326 18.776 20.4167C18.776 20.1007 18.6606 19.8273 18.4297 19.5964L12.8333 14L18.4297 8.40365C18.6606 8.17274 18.776 7.89931 18.776 7.58333C18.776 7.26736 18.6606 6.99392 18.4297 6.76302L16.5703 4.90365C16.3394 4.67274 16.066 4.55729 15.75 4.55729C15.434 4.55729 15.1606 4.67274 14.9297 4.90365L6.65365 13.1797C6.42274 13.4106 6.30729 13.684 6.30729 14C6.30729 14.316 6.42274 14.5894 6.65365 14.8203L14.9297 23.0964C15.1606 23.3273 15.434 23.4427 15.75 23.4427C16.066 23.4427 16.3394 23.3273 16.5703 23.0964ZM28 14C28 16.5399 27.3741 18.8824 26.1224 21.0273C24.8707 23.1723 23.1723 24.8707 21.0273 26.1224C18.8824 27.3741 16.5399 28 14 28C11.4601 28 9.11762 27.3741 6.97266 26.1224C4.82769 24.8707 3.12934 23.1723 1.8776 21.0273C0.625868 18.8824 0 16.5399 0 14C0 11.4601 0.625868 9.11762 1.8776 6.97266C3.12934 4.82769 4.82769 3.12934 6.97266 1.8776C9.11762 0.625868 11.4601 0 14 0C16.5399 0 18.8824 0.625868 21.0273 1.8776C23.1723 3.12934 24.8707 4.82769 26.1224 6.97266C27.3741 9.11762 28 11.4601 28 14Z" fill="#3B3B3B"/>
+                    </svg>
                 </div>
-                <div class="swiper-slide">
-                    <img src="http://localhost:8080/resource/img+download.jfif" alt="">
-                </div>
-                <div class="swiper-slide">
-                    <img src="http://localhost:8080/resource/img+download.jfif" alt="">
-                </div>
-                <div class="swiper-slide">
-                    <img src="http://localhost:8080/resource/img+download.jfif" alt="">
-                </div>
-                <div class="swiper-slide">
-                    <img src="http://localhost:8080/resource/img+download.jfif" alt="">
-                </div>
-                <div class="swiper-slide">
-                    <img src="http://localhost:8080/resource/img+download.jfif" alt="">
-                </div>
+        
             </div>
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-pagination"></div>
-        </div>
-    </section>
-
-    <section class="features">
-        <div class="swiper mySwiper">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    <img src="http://localhost:8080/resource/img+free-delivery-logo-with-bike-man-courier_1308-48827.webp" />
-                </div>
-                <div class="swiper-slide">
-                    <img src="http://localhost:8080/resource/img+article_online-ordering_main.jpg" />
-                </div>
-                <div class="swiper-slide">
-                    <img src="http://localhost:8080/resource/img+money-saving-tips-1622109964.jpg" />
-                </div>
-                <div class="swiper-slide">
-                    <img src="http://localhost:8080/resource/img+images.jfif" />
-                </div>
-            </div>
-            <div class="swiper-pagination"></div>
-        </div>
-
-    </section>
+          </section>      
+      </section>
+    </main>
 
 </body>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script src="http://localhost:8080/resource/home+frontend-script.js"></script>
+
 
 </html>

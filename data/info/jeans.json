@@ -1,39 +1,47 @@
 [
     {
-        "id":1,
+        "id": "1",
         "name": "Big Jeans",
-        "size": ["M"],
-        "price": [120],
-        "description": "big jeans",
-        "inStock": true,
-        "images": ["bigJeans1.png", "bigJeans2.png"]
+        "size": "L",
+        "price": "120",
+        "description": "BIG",
+        "inStock": "1",
+        "images": ""
     },
     {
-        "id":2,
+        "id": "2",
         "name": "Small Jeans",
-        "size": ["M"],
-        "price": [120],
-        "description": "small jeans",
-        "inStock": true,
-        "images": ["bigJeans1.png", "bigJeans2.png"]
+        "size": "S",
+        "price": "300",
+        "description": "SMALL",
+        "inStock": "1",
+        "images": ""
     },
     {
-        "id":3,
+        "id": "3",
         "name": "Cotton Jeans",
-        "size": ["M"],
-        "price": [120],
-        "description": "cotton jeans",
-        "inStock": true,
-        "images": ["bigJeans1.png", "bigJeans2.png"]
+        "size": "M",
+        "price": "405",
+        "description": "COTTON",
+        "inStock": "0",
+        "images": ""
     },
     {
-        "id":4,
-        "name": "Silk? Jeans",
-        "size": ["M"],
-        "price": [120],
-        "description": "silk? jeans",
-        "inStock": true,
-        "images": ["bigJeans1.png", "bigJeans2.png"]
+        "id": "4",
+        "name": "Silk Jeans",
+        "size": "M",
+        "price": "1000",
+        "description": "SILK",
+        "inStock": "1",
+        "images": ""
+    },
+    {
+        "id": "5",
+        "name": "Nylon Jeans",
+        "size": "M",
+        "price": "600",
+        "description": "NYLON",
+        "inStock": "1",
+        "images": ""
     }
 ]
-
