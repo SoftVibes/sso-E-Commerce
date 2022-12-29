@@ -74,3 +74,32 @@ document.getElementsByClassName('button-categories')[0].addEventListener('click'
 document.getElementsByClassName('button-home')[0].addEventListener('click', function () {
     window.location.href = 'http://localhost:8080/';
 });
+
+
+
+/* Getting Cart from cookies */
+
+cookie = document.cookie.split("=")[1];
+
+if (cookie == undefined) {
+    document.getElementById('items').innerHTML = '<h3>No Products in Cart :(</h3>';
+} else {
+    cookie = JSON.parse(cookie);
+    console.log(cookie);
+    document.getElementById('items').innerHTML = '';
+    for (let i = 0; i < cookie.length; i++) {
+        document.getElementById('items').innerHTML += `
+        <div class="item">
+            <div class="item-image  ${cookie[i].color}">
+                <img src="${cookie[i].image}" alt="">
+            </div>
+            <div class="item-info">
+                <h3>${cookie[i].name}</h3>
+                <p>${cookie[i].color}</p>
+                <p>${cookie[i].size}</p>
+                <p>${cookie[i].price}</p>
+            </div>
+        </div>
+        `;
+    }
+}
