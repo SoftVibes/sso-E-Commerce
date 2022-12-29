@@ -43,4 +43,4 @@ fetch(`http://localhost:8080/cat/${category}/${id}` , {
             document.cookie = `cart=[${JSON.stringify(data)}]`;
         }
     });
-}
+});
