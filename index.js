@@ -160,15 +160,3 @@ async function getData () {
 setInterval(getData, 1000*60*30);
 
 //Cookies 
-app.post("/cookies", (req, res) => {
-    const { product, action } = req.body;
-    products = req.cookies.products;
-    if (action == 'add') {
-        if (products) {
-            products.push(product);
-        } else {
-            products = [product];
-        }
-        res.cookie('products')
-    }
-}
