@@ -24,36 +24,6 @@ document.getElementsByClassName('button-cart')[0].addEventListener('click', () =
 
 /* swiper trollin */
 
-var swiper = new Swiper(".mySwiper", {
-    effect: "fade",
-    grabCursor: true,
-    loop: true,
-    autoplay: {
-        delay: 2000,
-        disableOnInteraction: false,
-    },
-    pagination: {
-        el: ".swiper-pagination",
-    },
-});
-
-var swiper2 = new Swiper(".mySwiper2", {
-    spaceBetween: 30,
-    centeredSlides: true,
-    loop: true,
-    autoplay: {
-        delay: 1500,
-        disableOnInteraction: false,
-    },
-    pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-    },
-    navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-    },
-});
 
 /* Search bar bs */
 document.getElementsByClassName('input-search')[0].addEventListener('keyup', (key) => {
