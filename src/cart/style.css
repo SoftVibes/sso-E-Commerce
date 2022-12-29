@@ -183,16 +183,15 @@ i {
 }
 
 #items {
-    background-color: #babcc4;
-    display: flex;
+    background-color: #E3E6F3;
+    /* display: flex; */
+    padding: 2rem;
 }
 
 #items-show {
     display: flex;
     flex-direction: column;
     padding: 1em 8em;
-    min-height: 90vh;
-    width: 80vw;
     z-index: 0;
 }
 
@@ -228,17 +227,33 @@ i {
 
 
 .item-list {
-    position: fixed;
-    display: flex;
-    flex-direction: column;
-    right: 2%;
-    height: 70vh;
-    width: 18vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 150px;
+    width: 100%;
     background: white;
-    margin-top: 3vh;
     border-radius: 0.5rem;
-    box-shadow: 0 0 0rem 0.5rem white;
     padding: 2rem;
+}
+
+.item-list-1 {
+    height: 100%;
+}
+
+.item-list-1, .item-list-1-1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.subtotal-tag {
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+.price-tag {
+    font-size: 2rem;
+    font-weight: 700;
 }
 
 .item-list h5 {
