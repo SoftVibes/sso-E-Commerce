@@ -199,7 +199,7 @@ i {
 
 .item {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1.5fr 1fr;
     box-shadow: 0px 4px 16px rgb(0 0 0 / 25%);
     border-radius: 31px;
     height: 200px;
@@ -275,6 +275,7 @@ i {
     outline: none;
     border: none;
     height: 35px;
+    font-weight: 600;
     font-size: 1.3em;
     display: flex;
     align-items: center;
@@ -371,7 +372,8 @@ i {
 
 .details {
     height: 200px;
-    padding: 1rem;
+    padding: 1.5rem;
+    background: white;
 }
 
 
@@ -384,25 +386,28 @@ i {
 
 .details-heading, .details-quantity{
     font-size: 1rem;
-    font-weight: 700;
+    font-weight: 600;
     margin: 0;
     padding-bottom: 0.3rem;
+    color: #3b3b3b;
 }
 
 .details-price {
     font-size: 1.6rem;
-    font-weight: 700;
+    font-weight: 600;
+    color: #292929;
     margin: 0;
     padding-bottom: 0.3rem;
 }
 
 .quantity-details {
     font-size: 1.2rem;
-    font-weight: 700;
+    font-weight: 600;
     width: 40px;
     height: 25px;
     outline: 0;
     border: none;
     padding-left: 0.5rem;
     background: transparent;
+    color: #292929;
 }
